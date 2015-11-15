@@ -50,6 +50,8 @@ The interval with the maximum activity is `r max_interval` interval.
 missingvals <- sum(is.na(activity_data[-c(1,63,64)]))
 ```
 Number of missing values `r missingvals`.  
+
+I have included means of the specific 5 minute intervals where NAs are present.  
 ```{r}
 #imputing missing values - using rowmeans
 for(i in 1:nrow(activity_data)){

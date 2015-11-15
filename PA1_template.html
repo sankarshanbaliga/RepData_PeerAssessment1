@@ -100,6 +100,7 @@ max_interval &lt;- activity_data[activity_data$maxactivity == 1,]$interval</code
 <pre class="r"><code>#Number of missing values - 2304
 missingvals &lt;- sum(is.na(activity_data[-c(1,63,64)]))</code></pre>
 <p>Number of missing values 2304.</p>
+<p>I have included means of the specific 5 minute intervals where NAs are present.</p>
 <pre class="r"><code>#imputing missing values - using rowmeans
 for(i in 1:nrow(activity_data)){
     activity_data[i, is.na(activity_data[i,])] &lt;- 
